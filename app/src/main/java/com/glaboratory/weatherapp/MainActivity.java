@@ -295,7 +295,7 @@ public class MainActivity extends AppCompatActivity {
         secondDayWeather.setMaxTemperature(secondDay.getDouble("temperatureMax"));
         secondDayWeather.setHumidity(secondDay.getDouble("humidity"));
         secondDayWeather.setPrecipChance(secondDay.getDouble("precipProbability"));
-        secondDayWeather.setPrecipType(secondDay.getString("precipType"));
+        //secondDayWeather.setPrecipType(secondDay.getString("precipType"));
         secondDayWeather.setWindSpeed(secondDay.getDouble("windSpeed"));
         mTwoDaysWeather = secondDayWeather;
 
@@ -306,7 +306,7 @@ public class MainActivity extends AppCompatActivity {
         thirdDayWeather.setMaxTemperature(thirdDay.getDouble("temperatureMax"));
         thirdDayWeather.setHumidity(thirdDay.getDouble("humidity"));
         thirdDayWeather.setPrecipChance(thirdDay.getDouble("precipProbability"));
-        thirdDayWeather.setPrecipType(thirdDay.getString("precipType"));
+        //thirdDayWeather.setPrecipType(thirdDay.getString("precipType"));
         thirdDayWeather.setWindSpeed(thirdDay.getDouble("windSpeed"));
         mThreeDaysWeather = thirdDayWeather;
 
