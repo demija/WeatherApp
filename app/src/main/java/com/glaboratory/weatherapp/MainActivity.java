@@ -58,16 +58,16 @@ public class MainActivity extends AppCompatActivity {
     @Bind(R.id.progressBar) ProgressBar mProgressBar;
     @Bind(R.id.firstDayImageView) ImageView mFirstDayImageView;
     @Bind(R.id.firstDayTempLabel) TextView mFirstDayTemp;
-    @Bind(R.id.firstDayPrecipLabel) TextView mFirstDayPrecipLabel;
-    @Bind(R.id.firstDayPrecipValue) TextView mFirstDayPrecipValue;
+    //@Bind(R.id.firstDayPrecipLabel) TextView mFirstDayPrecipLabel;
+    //@Bind(R.id.firstDayPrecipValue) TextView mFirstDayPrecipValue;
     @Bind(R.id.secondDayImageView) ImageView mSecondDayImageView;
     @Bind(R.id.secondDayTempLabel) TextView mSecondDayTemp;
-    @Bind(R.id.secondDayPrecipLabel) TextView mSecondDayPrecipLabel;
-    @Bind(R.id.secondDayPrecipValue) TextView mSecondDayPrecipValue;
+    //@Bind(R.id.secondDayPrecipLabel) TextView mSecondDayPrecipLabel;
+    //@Bind(R.id.secondDayPrecipValue) TextView mSecondDayPrecipValue;
     @Bind(R.id.thirdDayImageView) ImageView mThirdDayImageView;
     @Bind(R.id.thirdDayTempLabel) TextView mThirdDayTemp;
-    @Bind(R.id.thirdDayPrecipLabel) TextView mThirdDayPrecipLabel;
-    @Bind(R.id.thirdDayPrecipValue) TextView mThirdDayPrecipValue;
+    //@Bind(R.id.thirdDayPrecipLabel) TextView mThirdDayPrecipLabel;
+    //@Bind(R.id.thirdDayPrecipValue) TextView mThirdDayPrecipValue;
     @Bind(R.id.relativeLayout) RelativeLayout mRelativeLayout;
 
     @Override
@@ -239,20 +239,20 @@ public class MainActivity extends AppCompatActivity {
         }
 
         mFirstDayTemp.setText(mOneDayWeather.getMinTemperature() + " / " + mOneDayWeather.getMaxTemperature() + " \u2103");
-        mFirstDayPrecipLabel.setText(mOneDayWeather.getPrecipType() + " ");
-        mFirstDayPrecipValue.setText(mOneDayWeather.getPrecipChance() + "%");
+        //mFirstDayPrecipLabel.setText(mOneDayWeather.getPrecipType() + " ");
+        //mFirstDayPrecipValue.setText(mOneDayWeather.getPrecipChance() + "%");
         Drawable firstDayDrawable = getResources().getDrawable(mOneDayWeather.getIconId());
         mFirstDayImageView.setImageDrawable(firstDayDrawable);
 
         mSecondDayTemp.setText(mTwoDaysWeather.getMinTemperature() + " / " + mTwoDaysWeather.getMaxTemperature() + " \u2103");
-        mSecondDayPrecipLabel.setText(mTwoDaysWeather.getPrecipType() + " ");
-        mSecondDayPrecipValue.setText(mTwoDaysWeather.getPrecipChance() + "%");
+        //mSecondDayPrecipLabel.setText(mTwoDaysWeather.getPrecipType() + " ");
+        //mSecondDayPrecipValue.setText(mTwoDaysWeather.getPrecipChance() + "%");
         Drawable secondDayDrawable = getResources().getDrawable(mTwoDaysWeather.getIconId());
         mSecondDayImageView.setImageDrawable(secondDayDrawable);
 
         mThirdDayTemp.setText(mThreeDaysWeather.getMinTemperature() + " / " + mThreeDaysWeather.getMaxTemperature() + " \u2103");
-        mThirdDayPrecipLabel.setText(mThreeDaysWeather.getPrecipType() + " ");
-        mThirdDayPrecipValue.setText(mThreeDaysWeather.getPrecipChance() + "%");
+        //mThirdDayPrecipLabel.setText(mThreeDaysWeather.getPrecipType() + " ");
+        //mThirdDayPrecipValue.setText(mThreeDaysWeather.getPrecipChance() + "%");
         Drawable thirdDayDrawable = getResources().getDrawable(mThreeDaysWeather.getIconId());
         mThirdDayImageView.setImageDrawable(thirdDayDrawable);
     }
@@ -283,8 +283,8 @@ public class MainActivity extends AppCompatActivity {
         firstDayWeather.setMinTemperature(firstDay.getDouble("temperatureMin"));
         firstDayWeather.setMaxTemperature(firstDay.getDouble("temperatureMax"));
         firstDayWeather.setHumidity(firstDay.getDouble("humidity"));
-        firstDayWeather.setPrecipChance(firstDay.getDouble("precipProbability"));
-        firstDayWeather.setPrecipType(firstDay.getString("precipType"));
+        //firstDayWeather.setPrecipChance(firstDay.getDouble("precipProbability"));
+        //firstDayWeather.setPrecipType(firstDay.getString("precipType"));
         firstDayWeather.setWindSpeed(firstDay.getDouble("windSpeed"));
         mOneDayWeather = firstDayWeather;
 
@@ -294,7 +294,7 @@ public class MainActivity extends AppCompatActivity {
         secondDayWeather.setMinTemperature(secondDay.getDouble("temperatureMin"));
         secondDayWeather.setMaxTemperature(secondDay.getDouble("temperatureMax"));
         secondDayWeather.setHumidity(secondDay.getDouble("humidity"));
-        secondDayWeather.setPrecipChance(secondDay.getDouble("precipProbability"));
+        //secondDayWeather.setPrecipChance(secondDay.getDouble("precipProbability"));
         //secondDayWeather.setPrecipType(secondDay.getString("precipType"));
         secondDayWeather.setWindSpeed(secondDay.getDouble("windSpeed"));
         mTwoDaysWeather = secondDayWeather;
@@ -305,7 +305,7 @@ public class MainActivity extends AppCompatActivity {
         thirdDayWeather.setMinTemperature(thirdDay.getDouble("temperatureMin"));
         thirdDayWeather.setMaxTemperature(thirdDay.getDouble("temperatureMax"));
         thirdDayWeather.setHumidity(thirdDay.getDouble("humidity"));
-        thirdDayWeather.setPrecipChance(thirdDay.getDouble("precipProbability"));
+        //thirdDayWeather.setPrecipChance(thirdDay.getDouble("precipProbability"));
         //thirdDayWeather.setPrecipType(thirdDay.getString("precipType"));
         thirdDayWeather.setWindSpeed(thirdDay.getDouble("windSpeed"));
         mThreeDaysWeather = thirdDayWeather;
