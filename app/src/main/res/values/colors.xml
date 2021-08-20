@@ -143,4 +143,5 @@
     <color name="LightYellow">#FFFFE0</color>
     <color name="Ivory">#FFFFF0</color>
     <color name="White">#FFFFFF</color>
+    <color name="Black">#000000</color>
 </resources>
